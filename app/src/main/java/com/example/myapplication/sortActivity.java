@@ -19,8 +19,13 @@ public class sortActivity extends AppCompatActivity {
 
     public void sortNumber(View v) {
         TextView txtResult = findViewById(R.id.text_result);
-        Integer x = new Random().nextInt(101);
-        txtResult.setText(x.toString());
+        Random gerador = new Random();
+        String string = "";
+        for (int i = 0; i < 10; i++) {
+            string += "N "+ (i+1) + ": " + gerador.nextInt(26) + " \n";
+        }
+
+        txtResult.setText(string);
 
     }
 }
